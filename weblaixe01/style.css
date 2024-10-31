@@ -96,6 +96,8 @@ li {
     align-items: center;
     height: 100%;
     padding: 0 150px 0 50px; 
+    text-align: justify; 
+    margin: 10px 0; 
 }
 
 .main-nav .logo img {
@@ -892,11 +894,6 @@ li {
     object-fit: cover;
 }
 
-.about-section {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-}
-
 .about-section .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -904,11 +901,13 @@ li {
 }
 
 .about-section h2 {
-    font-size: 36px;
     color: #1E72BD;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     position: relative;
+    font-size: 3.0em;
+    margin: 20px;
+   
 }
 
 .about-section h2::after {
@@ -934,17 +933,24 @@ li {
 }
 
 .gallery-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    text-align: center; /* Căn giữa tiêu đề */
+    font-size: 2.5em; /* Kích thước chữ lớn hơn */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    color: #333; /* Màu chữ */
+
 }
 
 .gallery-section h2 {
-    font-size: 32px;
-    color: #1E72BD;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
+  text-align: center; /* Căn giữa tiêu đề phụ */
+    font-size: 30px; /* Kích thước chữ cho tiêu đề phụ */
+    margin: 20px 0; /* Khoảng cách trên/dưới cho tiêu đề phụ */
+    color: #1e72bd; /* Màu chữ cho tiêu đề phụ */
+}
+.gallery-section h3 { 
+    text-align: center; /* Căn giữa tiêu đề phụ */
+    font-size: 0.8em; /* Kích thước chữ cho tiêu đề phụ */
+    margin: 20px 0; /* Khoảng cách trên/dưới cho tiêu đề phụ */
+    color: #555; /* Màu chữ cho tiêu đề phụ */
 }
 
 .gallery-section h2::after {
@@ -1018,3 +1024,39 @@ li {
 }
 
 /*----------------------------breadcrumb-----------------------------------*/
+.breadcrumb-container {
+    display: flex;
+    justify-content: center; /* Căn giữa breadcrumb */
+    padding: 30px 0; /* Tăng khoảng cách trên dưới */
+}
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 10px;
+    font-size: 20px;
+
+}
+
+.breadcrumb-item {
+    margin-right: 5px;
+}
+
+.breadcrumb-item a {
+    color: #827e7e; /* Màu xám cho các link trước */
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    color: #080707; /* Màu đen cho trang cuối */
+}
+
+.breadcrumb-item::after {
+    content: ">";
+    margin-left: 5px;
+}
+
+.breadcrumb-item:last-child::after {
+    content: "";
+}
