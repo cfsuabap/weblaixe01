@@ -728,13 +728,26 @@ li {
 
 /*----------------------------footer-----------------------------------*/
 .site-footer {
-    background-color: #ffffff;
+    position: relative; /* Thêm để đảm bảo vị trí của các phần tử */
     font-family: Arial, sans-serif;
-    padding: 60px 0 0; /* Increased top padding */
-    font-size: 16px; /* Base font size */
+    padding: 60px 0 0;
+    font-size: 16px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../weblaixe01/image/bannerfooter.jpg);
+    filter: blur(8px); /* Làm mờ background */
+    z-index: 0; /* Đặt nền phía sau */
 }
 
 .footer-content {
+    position: relative; /* Đảm bảo nội dung nằm trên nền */
+    z-index: 1; /* Đặt nội dung phía trên */
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -851,31 +864,30 @@ li {
 /*----------------------------scroll to top button-----------------------------------*/
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; /* Khoảng cách từ cạnh dưới */
+    right: 20px;  /* Khoảng cách từ cạnh phải */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    color: grey;
-    border: 2px solid grey;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
     font-size: 24px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s, background-color 0.3s;
-    opacity: 0;
-    z-index: 1000;
-}
-
-.scroll-to-top:hover {
-    background-color: #155592;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    opacity: 0; /* Ẩn nút khi chưa cần thiết */
+    visibility: hidden;
 }
 
 .scroll-to-top.show {
     opacity: 1;
+    visibility: visible;
 }
+
 
 /*----------------------------about-----------------------------------*/
 /*----------------------------about-----------------------------------*/
@@ -926,6 +938,59 @@ li {
     margin-bottom: 20px;
     text-align: justify;
 }
+.tips-grid {
+    padding: 20px 0;
+}
+
+.tips-grid .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tips-grid h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tips-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.tip-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: calc(50% - 10px);
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tip-item:hover {
+    transform: translateY(-5px);
+}
+
+.tip-item img {
+    width: 100%;
+    height: auto;
+}
+
+.tip-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px;
+}
+
+.tip-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 10px 10px;
+}
+
 
 .gallery-section {
     padding: 80px 0;
@@ -1026,8 +1091,7 @@ li {
 /*----------------------------breadcrumb-----------------------------------*/
 .breadcrumb-container {
     display: flex;
-    justify-content: center; /* Căn giữa breadcrumb */
-    padding: 30px 0; /* Tăng khoảng cách trên dưới */
+    padding: 20px 0; /* Tăng khoảng cách trên dưới */
 }
 .breadcrumb {
     list-style: none;
@@ -1035,6 +1099,7 @@ li {
     padding: 0;
     margin: 10px;
     font-size: 20px;
+    margin-left: 50px;
 
 }
 
@@ -1045,6 +1110,11 @@ li {
 .breadcrumb-item a {
     color: #827e7e; /* Màu xám cho các link trước */
     text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb-item a:hover {
+    color: #080707; /* Đổi màu xám khi hover */
 }
 
 .breadcrumb-item.active {

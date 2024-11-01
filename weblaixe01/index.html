@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    
     <header>
         <div class="top-bar">
             <div class="location">
@@ -15,7 +16,9 @@
                 <span>18A Cộng Hoà, Quận Tân Bình, Thành phố HCM</span>
             </div>
             <div class="right-section">
-                <button class="login-btn">Đăng nhập</button>
+                <a href="dangky.html">
+                    <button class="login-btn">Đăng nhập</button>
+                </a>
                 <div class="social-icons">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -24,7 +27,7 @@
             </div>
         </div>
     </header>
-
+    
     <nav class="main-nav">
         <div class="container">
             <div class="logo">
@@ -35,7 +38,7 @@
                     <a href="#">Giới thiệu <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="about/ve-trung-tam.html">Về trung tâm</a></li>
-                        <li><a href="../about/kinh-nghiem.html">Kinh nghiệm </a></li>
+                        <li><a href="about/kinh-nghiem.html">Kinh nghiệm </a></li>
                     </ul>
                 </li> 
                 <li class="dropdown">
@@ -56,13 +59,15 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Kinh nghiệm học lái xe <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Học lý thuyết trực tuyến <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="kinh-nghiem/kinh-nghiem-xe-may.html">Thi bằng lái xe máy</a></li>
-                        <li><a href="kinh-nghiem/kinh-nghiem-o-to.html">Thi bằng lái xe ô tô</a></li>
+                        <li><a href="hoc-ly-thuyet/hoc-a.html">Bằng lái xe hạng A </a></li>
+                        <li><a href="hoc-ly-thuyet/hoc-b.html">Bằng lái xe hạng B </a></li>
+                        <li><a href="hoc-ly-thuyet/hoc-c.html">Bằng lái xe hạng C </a></li>
+
                     </ul>
                 </li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
@@ -160,22 +165,28 @@
         <h2 class="license-title">LĨNH VỰC TUYỂN SINH</h2>
         <div class="license-container">
             <div class="license-card">
-                <div class="license-image">
-                    <img src="image/xeb1.png" alt="Bằng lái xe B1">
-                </div>
-                <h3 class="license-name">Bằng Lái Xe B1</h3>
+                <a href="bang-lai-b1.html">
+                    <div class="license-image">
+                        <img src="image/xeb1.png" alt="Bằng lái xe B1">
+                    </div>
+                    <h3 class="license-name">Bằng Lái Xe B1</h3>
+                </a>
             </div>
             <div class="license-card">
-                <div class="license-image">
-                    <img src="image/xeb2.png" alt="Bằng lái xe B2">
-                </div>
-                <h3 class="license-name">Bằng Lái Xe B2</h3>
+                <a href="bang-lai-b2.html">
+                    <div class="license-image">
+                        <img src="image/xeb2.png" alt="Bằng lái xe B2">
+                    </div>
+                    <h3 class="license-name">Bằng Lái Xe B2</h3>
+                </a>
             </div>
             <div class="license-card">
-                <div class="license-image">
-                    <img src="image/xec.png" alt="Bằng lái xe C">
-                </div>
-                <h3 class="license-name">Bằng Lái Xe C</h3>
+                <a href="bang-lai-c.html">
+                    <div class="license-image">
+                        <img src="image/xec.png" alt="Bằng lái xe C">
+                    </div>
+                    <h3 class="license-name">Bằng Lái Xe C</h3>
+                </a>
             </div>
         </div>
     </section>
@@ -281,6 +292,7 @@
     </section>
 
     <footer class="site-footer">
+        <div class="background"></div> <!-- Thêm lớp background -->
         <div class="footer-content">
             <div class="footer-section">
                 <h3 class="footer-title">TRUNG TÂM ĐÀO TẠO LÁI XE</h3>
@@ -317,13 +329,16 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Copyright © WEB DEMO</p>
+            <p></p>
         </div>
     </footer>
+    
 
     <button class="scroll-to-top" id="scrollToTop">
         <i class="fas fa-chevron-up"></i>
     </button>
+    
+    <script src="js/scroll.js"></script>
     
     <script src="js/script.js"></script>
 </body>

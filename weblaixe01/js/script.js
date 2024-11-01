@@ -54,26 +54,6 @@ function prevTestimonial() {
 // Auto slide every 1.5 seconds
 setInterval(nextTestimonial, 5000);
 
-// Event listeners for manual navigation
-nextBtn.addEventListener('click', nextTestimonial);
-prevBtn.addEventListener('click', prevTestimonial);
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var scrollToTopBtn = document.getElementById("scrollToTop");
 
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 100) {
-            scrollToTopBtn.classList.add('show');
-        } else {
-            scrollToTopBtn.classList.remove('show');
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
